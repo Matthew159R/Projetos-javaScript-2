@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar usuário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="warning">
+            <p>O limite são 60 requisições por hora =)</p>
+        </div>
+
+        <div class="search-container">
+            <form>
+                <input type="text" id="search-input" name="search" placeholder="Pesquisar" value="Matthew159R">
+                <button id="search-button"><img src="lupa.png" id="search-img"></button>
+            </form>
+        </div>
+
+        <div class="result">
+            <div class="container-avatar">
+                <img src="" class="avatar-user">
+                <div class="opacity"><div class="box"></div><img src="camera.png" class="png-camera"><div class="box"></div></div>
+                <img src="" alt="" class="avatar-user-max">
+            </div>
+
+            <div class="resultText">
+                <p class="name-user"></p>
+                <p class="login-user"></p>
+                <p class="bio-user"></p>
+                <!--<div class="avatar-user-clicked"></div>-->
+                <div class="followers-container">
+                    <p class="followers"></p>
+                    <p class="following"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="user-not-found">
+            <h2>Usuário não encontado</h2>
+            <p>Dica: Verifique se você digitou todas as letras corretamente, maiúscolas e minúscolas</p>
+            <img src="User not found.gif">
+        </div>
+
+    </div>
+
+    
+    <script src="app.js"></script>
+</body>
+</html>

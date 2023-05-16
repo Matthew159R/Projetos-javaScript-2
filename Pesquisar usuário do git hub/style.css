@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(rgb(46, 43, 80) 50%, rgb(31, 37, 61) 50%);
+    align-items: center;
+}
+
+form {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#search-img, button {
+    width: 60px;
+    height: 50px;
+    border: 0;
+    cursor: pointer;
+}
+
+button {
+    background-color: transparent;
+}
+
+#search-input {
+    width: 500px;
+    background-color: rgb(36, 41, 61) ;
+    border: solid 2px rgb(22, 22, 66);
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(rgb(45, 44, 88), rgb(44, 78, 88));
+    width: 500px;
+    height: 500px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.name-user{
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.bio-user {
+    color: white;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.login-user {
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.avatar-user {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: solid 2px orange;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.resultText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-avatar {
+    position: relative;
+}
+
+.opacity {
+    width: 95%;
+    height: 95%;
+    background: linear-gradient(white, rgb(255, 255, 255));
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    opacity: 0.6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.png-camera {
+    width: 40px;
+}
+
+.box {
+    width: 25px;
+    height: 10px;
+    border: solid 2px black;
+}
+
+.avatar-user-max {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    background-color: red;
+    top: -20px;
+    right: -125px;
+    margin: 20px 23px 0 0;
+    animation: avatar-user-max-animation 1s forwards;
+    border-radius: 20px;
+    display: none;
+}
+
+@keyframes avatar-user-max-animation {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 450px;
+    }
+}
+
+@keyframes avatar-user-max-animation-reverse {
+    from {
+        height: 450px;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+@keyframes animation-opacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.6;
+    }
+}
+
+@keyframes animation-opacity-reverse {
+    from {
+        opacity: 0.6;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.search-container {
+    margin: 0 0 0 85px;
+}
+
+
+@keyframes result-animation {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 500px;
+    }
+}
+
+.result {
+    display: none;
+}
+
+.followers-container {
+    display: flex;
+    width: 100%;
+    gap: 200px;
+}
+
+.followers, .following {
+    color: whitesmoke;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.user-not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+    width: 300px;
+    background-color: rgb(45, 44, 88);
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 50px;
+    display: none;
+}
+
+.user-not-found img {
+    width: 150px;
+    border-radius: 20px;
+    border-top: solid 3px rgb(113, 129, 153);
+    border-bottom: solid 3px rgb(113, 129, 153);
+    padding: 5px;
+}
+
+.user-not-found p {
+    margin: 0 0 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes user-not-found-animation {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+.warning {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgb(209, 58, 58);
+    box-shadow: 2px 2px 20px rgb(250, 76, 76);
+    padding: 10px;
+    border-radius: 5px;
+    width: 330px;
+    border: solid 4px rgb(68, 4, 4);
+}
+
+.warning::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 85%;
+    border-top: solid 4px rgb(240, 139, 139);
+    animation: empty-edges-animation 5s forwards;
+}
+
+.warning p {
+    color: white;
+    border-left: solid 3px white;
+    padding: 5px;
+    font-size: 18px;
+}
+
+
+@keyframes warning-animation {
+    0% {
+        left: -280px;
+    }
+
+    100% {
+        left: 20px;
+    }
+
+}
+
+@keyframes empty-edges-animation {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+@keyframes warning-animation-reverse {
+    0% {
+        left: 20px;
+    }
+
+    100% {
+        left: -380px;
+    }
+}
