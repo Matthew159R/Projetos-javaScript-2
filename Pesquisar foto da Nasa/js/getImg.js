@@ -1,5 +1,5 @@
-const apiKey = 'zQfuVAtsbXNZBUxp7GjOmJ3twFS8xhzeSHnawBMb'
-
+const apiKey = 'Minha api key'
+// Não posso forcener minha APIkey
 
 const getPlanetData = async arrDate => {
     try {
